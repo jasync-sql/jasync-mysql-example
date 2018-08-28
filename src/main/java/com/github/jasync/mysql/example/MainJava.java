@@ -37,21 +37,11 @@ public class MainJava {
         "host.com",
         3306,
         "password",
-        "schema",
-        new SSLConfiguration(),
-        CharsetUtil.UTF_8,
-        16777216,
-        PooledByteBufAllocator.DEFAULT,
-        Duration.ofSeconds(5),
-        Duration.ofSeconds(5),
-        null
-      ),
-      CharsetMapper.Companion.getInstance(),
-      NettyUtils.INSTANCE.getDefaultEventLoopGroup(),
-      ExecutorServiceUtils.INSTANCE.getCommonPool()
+        "schema"
+      )
     );
     connection.connect().get();
-    CompletableFuture<QueryResult> future = connection.sendPreparedStatement("select * from table limit 2", new ArrayList<>());
+    CompletableFuture<QueryResult> future = connection.sendPreparedStatement("select * from table limit 2");
     QueryResult queryResult = future.get();
     System.out.println(Arrays.toString(((ArrayRowData) (queryResult.getRows().get(0))).getColumns()));
     System.out.println(Arrays.toString(((ArrayRowData) (queryResult.getRows().get(1))).getColumns()));
