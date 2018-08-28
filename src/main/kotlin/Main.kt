@@ -6,7 +6,7 @@ import com.github.jasync.sql.db.general.ArrayRowData
 import com.github.jasync.sql.db.mysql.MySQLConnection
 import mu.KotlinLogging
 
-val logger = KotlinLogging.logger {}
+private val logger = KotlinLogging.logger {}
 
 fun main(args: Array<String>) {
   //just to make sure which log level is active
