@@ -29,4 +29,5 @@ fun main(args: Array<String>) {
   val queryResult = future.get()
   println((queryResult.rows!![0] as ArrayRowData).columns.toList())
   println((queryResult.rows!![1] as ArrayRowData).columns.toList())
+  connection.disconnect().get()
 }

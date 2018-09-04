@@ -45,6 +45,8 @@ fun main(args: Array<String>) {
     println((queryResult.rows!![0] as ArrayRowData).columns.toList())
     println((queryResult.rows!![1] as ArrayRowData).columns.toList())
   }
+
+  connection.disconnect().get()
 }
 
 suspend fun Connection.sendPreparedStatementAwait(query: String, values: List<Any> = emptyList()): QueryResult =
