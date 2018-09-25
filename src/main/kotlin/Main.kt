@@ -3,7 +3,6 @@ package com.github.jasync.mysql.example
 import com.github.jasync.sql.db.Configuration
 import com.github.jasync.sql.db.Connection
 import com.github.jasync.sql.db.general.ArrayRowData
-import com.github.jasync.sql.db.mysql.MySQLConnection
 import com.github.jasync.sql.db.mysql.pool.MySQLConnectionFactory
 import com.github.jasync.sql.db.pool.ConnectionPool
 import com.github.jasync.sql.db.pool.PoolConfiguration

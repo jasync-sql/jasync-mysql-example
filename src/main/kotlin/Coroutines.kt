@@ -4,18 +4,13 @@ import com.github.jasync.sql.db.Configuration
 import com.github.jasync.sql.db.Connection
 import com.github.jasync.sql.db.QueryResult
 import com.github.jasync.sql.db.general.ArrayRowData
-import com.github.jasync.sql.db.mysql.MySQLConnection
 import com.github.jasync.sql.db.mysql.pool.MySQLConnectionFactory
 import com.github.jasync.sql.db.pool.ConnectionPool
 import com.github.jasync.sql.db.pool.PoolConfiguration
-import kotlinx.coroutines.experimental.async
 import kotlinx.coroutines.experimental.future.await
 import kotlinx.coroutines.experimental.launch
 import mu.KotlinLogging
-import java.nio.channels.CompletionHandler
-import java.util.concurrent.CompletableFuture
 import java.util.concurrent.TimeUnit
-import kotlin.coroutines.experimental.suspendCoroutine
 
 private val logger = KotlinLogging.logger {}
 
